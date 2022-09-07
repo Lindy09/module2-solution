@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Module 2 Assessment</title>
+    <link rel="stylesheet" href="style.css">
+</head>  
+<body>
+  <p id="placeholder">
+  
+  </p>
+  <button id="button">Roll Dice</button>
+ <script>
+ console.log("My name is Lindiwe, a student from Vaal University of Technology and my Github username is Lindy@09");
+  var dice = {
+  sides: 6,
+  roll: function () {
+    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    return randomNumber;
+  }
+}
+
+
+
+//Prints dice roll to the page
+
+function printNumber(number) {
+  var placeholder = document.getElementById('placeholder');
+  placeholder.innerHTML = number;
+}
+
+var button = document.getElementById('button');
+
+button.onclick = function() {
+  var result = dice.roll();
+  printNumber(result);
+};
+
+function randomFunc(categories){
+	for (let i=0;i<2;i++){
+		const random = categories[Math.floor(Math.random()*categories.length)];
+		return random
+	}
+}
+var categories=["Best Consumer Solution","Best Enterprise Solution","Best African Solution",
+"Most Innovative Solution","Best Gaming Solution","Best Health Solution","Best Agricultural Solution",
+"Best Educational Solution","Best Campus Cup Solution","Huawei AppGalleryategory 15"]
+
+console.log(randomFunc(categories));
+</script>
+</body>
+</html>
